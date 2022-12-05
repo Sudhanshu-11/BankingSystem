@@ -45,14 +45,9 @@ namespace Banking_System
 
             app.UseAuthorization();
 
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllers();
-            //});
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("default", "{controller=Users}/{action=GetUsers}/{id?}");
-                // Create routes for Web API and SignalR here too...
             });
         }
     }

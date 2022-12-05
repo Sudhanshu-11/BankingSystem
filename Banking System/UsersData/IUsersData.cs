@@ -9,12 +9,12 @@ namespace Banking_System.UsersData
      public interface IUsersData
     {
         List<Users> GetAllUsers();
-        Users GetUsers(Guid id);
+        Users GetUsers(int id);
         List<UserAccounts> GetAllUserAccount();
         UserAccounts AddUserAccount(UserAccounts userAccounts);
         void DeleteUserAccount(UserAccounts userAccounts);
         UserAccounts UpdateUserAccount(UserAccounts userAccounts);
 
-        UserAccounts GetUserAccountByID(Guid id);
+        UserAccounts GetUserAccountByID(int id);
     }
 }

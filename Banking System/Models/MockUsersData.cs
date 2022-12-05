@@ -13,12 +13,12 @@ namespace Banking_System.Models
         {
             new Users()
             {
-                Id=Guid.NewGuid(),
+                Id=1,
                 Name="Sudhanshu"
             },
             new Users()
             {
-                 Id=Guid.NewGuid(),
+                 Id=2,
                 Name="Himanshu"
             }
         };
@@ -26,13 +26,14 @@ namespace Banking_System.Models
         {
             return users;
         }
-        Users IUsersData.GetUsers(Guid id)
+        Users IUsersData.GetUsers(int id)
         {
             return users.FirstOrDefault(x => x.Id == id);
         }
         UserAccounts IUsersData.AddUserAccount(UserAccounts userAccounts)
         {
-            userAccounts.Id =  Guid.NewGuid();
+            var defId= usersAcc.OrderByDescending(u => u.Id).Select(x=>x.Id).FirstOrDefault();
+            userAccounts.Id = defId+1;
             usersAcc.Add(userAccounts);
             return userAccounts;
         }
@@ -56,11 +57,11 @@ namespace Banking_System.Models
             return getExisitingAcc;
         }
 
-        UserAccounts IUsersData.GetUserAccountByID(Guid id)
+        UserAccounts IUsersData.GetUserAccountByID(int id)
         {
             return usersAcc.FirstOrDefault(x => x.Id == id);
         }
-        public  UserAccounts getauseracc(Guid id)
+        public  UserAccounts getauseracc(int id)
         {
             return usersAcc.FirstOrDefault(x => x.Id == id);
         }

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace Banking_System.Controllers
@@ -13,9 +14,11 @@ namespace Banking_System.Controllers
     public class UsersController : ControllerBase
     {
         private IUsersData _iUsersData;
-        public UsersController(IUsersData iUsersData)
+        private IHttpContextAccessor http;
+        public UsersController(IUsersData iUsersData, IHttpContextAccessor httpContextAccessor)
         {
             this._iUsersData = iUsersData;
+            this.http = httpContextAccessor;
         }
 
         [HttpGet]
@@ -27,7 +30,7 @@ namespace Banking_System.Controllers
 
         [HttpGet]
         [Route("api/[Controller]/[action]/{id}")]
-        public IActionResult GetUsersbyId(Guid id)
+        public IActionResult GetUsersbyId(int id)
         {
             var Users = _iUsersData.GetUsers(id);
             if(Users != null)
@@ -49,7 +52,7 @@ namespace Banking_System.Controllers
                 };
             }
             _iUsersData.AddUserAccount(useraccounts);
-            return Created(HttpContext.Request.Scheme + "://" + HttpContext.Request.Host + HttpContext.Request.Path + "/" + useraccounts.Id, useraccounts);
+            return Ok(); 
         }
 
         [HttpGet]
@@ -61,7 +64,7 @@ namespace Banking_System.Controllers
 
         [HttpDelete]
         [Route("api/[Controller]/[action]/{id}")]
-        public IActionResult DeleteUsersbyId(Guid id)
+        public IActionResult DeleteUsersbyId(int id)
         {
             var UsersAcc = _iUsersData.GetUserAccountByID(id);
             if (UsersAcc != null)
@@ -74,7 +77,7 @@ namespace Banking_System.Controllers
 
         [HttpPatch]
         [Route("api/[Controller]/[action]/{id}")]
-        public IActionResult UpdateAccountBalance(Guid id, UserAccounts useraccounts)
+        public IActionResult UpdateAccountBalance(int id, UserAccounts useraccounts)
         {
             var ExisitingUsersAcc = _iUsersData.GetUserAccountByID(id);
              if (ExisitingUsersAcc == null)

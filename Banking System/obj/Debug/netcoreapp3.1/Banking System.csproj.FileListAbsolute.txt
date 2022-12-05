@@ -1,0 +1,21 @@
+C:\Users\varsh\source\repos\Banking System\Banking System\obj\Debug\netcoreapp3.1\Banking System.csproj.AssemblyReference.cache
+C:\Users\varsh\source\repos\Banking System\Banking System\obj\Debug\netcoreapp3.1\Banking System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\varsh\source\repos\Banking System\Banking System\obj\Debug\netcoreapp3.1\Banking System.AssemblyInfoInputs.cache
+C:\Users\varsh\source\repos\Banking System\Banking System\obj\Debug\netcoreapp3.1\Banking System.AssemblyInfo.cs
+C:\Users\varsh\source\repos\Banking System\Banking System\obj\Debug\netcoreapp3.1\Banking System.csproj.CoreCompileInputs.cache
+C:\Users\varsh\source\repos\Banking System\Banking System\obj\Debug\netcoreapp3.1\Banking System.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\varsh\source\repos\Banking System\Banking System\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\varsh\source\repos\Banking System\Banking System\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\varsh\source\repos\Banking System\Banking System\bin\Debug\netcoreapp3.1\Banking System.exe
+C:\Users\varsh\source\repos\Banking System\Banking System\bin\Debug\netcoreapp3.1\Banking System.deps.json
+C:\Users\varsh\source\repos\Banking System\Banking System\bin\Debug\netcoreapp3.1\Banking System.runtimeconfig.json
+C:\Users\varsh\source\repos\Banking System\Banking System\bin\Debug\netcoreapp3.1\Banking System.runtimeconfig.dev.json
+C:\Users\varsh\source\repos\Banking System\Banking System\bin\Debug\netcoreapp3.1\Banking System.dll
+C:\Users\varsh\source\repos\Banking System\Banking System\bin\Debug\netcoreapp3.1\Banking System.pdb
+C:\Users\varsh\source\repos\Banking System\Banking System\obj\Debug\netcoreapp3.1\staticwebassets\Banking System.StaticWebAssets.Manifest.cache
+C:\Users\varsh\source\repos\Banking System\Banking System\obj\Debug\netcoreapp3.1\staticwebassets\Banking System.StaticWebAssets.xml
+C:\Users\varsh\source\repos\Banking System\Banking System\obj\Debug\netcoreapp3.1\scopedcss\bundle\Banking System.styles.css
+C:\Users\varsh\source\repos\Banking System\Banking System\obj\Debug\netcoreapp3.1\Banking System.RazorTargetAssemblyInfo.cache
+C:\Users\varsh\source\repos\Banking System\Banking System\obj\Debug\netcoreapp3.1\Banking System.dll
+C:\Users\varsh\source\repos\Banking System\Banking System\obj\Debug\netcoreapp3.1\Banking System.pdb
+C:\Users\varsh\source\repos\Banking System\Banking System\obj\Debug\netcoreapp3.1\Banking System.genruntimeconfig.cache

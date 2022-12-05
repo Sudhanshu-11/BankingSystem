@@ -7,8 +7,8 @@ namespace Banking_System.Models
 {
     public class UserAccounts
     {
-        public Guid Id { get; set; }
-        public Guid UsersId { get; set; }
+        public int Id { get; set; }
+        public int UsersId { get; set; }
         public string UserAccName { get; set; }
         public decimal DepositAmt { get; set; }
         public decimal WithdrawlAmt { get; set; }
