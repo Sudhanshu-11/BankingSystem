@@ -16,12 +16,10 @@ namespace BankingSystemXUnitTest
       //  private readonly IUsersData _iUsersData;
         private readonly Mock<IUsersData> _iUsersData;
         private readonly UsersController _UsersController;
-        private readonly Mock<IHttpContextAccessor> Http;
         public UnitTest1()
         {
             this._iUsersData =new Mock<IUsersData> ();
-            this.Http = new Mock<IHttpContextAccessor>();
-            _UsersController = new UsersController(this._iUsersData.Object,this.Http.Object);
+            _UsersController = new UsersController(this._iUsersData.Object);
 
         }
 

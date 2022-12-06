@@ -15,10 +15,9 @@ namespace Banking_System.Controllers
     {
         private IUsersData _iUsersData;
         private IHttpContextAccessor http;
-        public UsersController(IUsersData iUsersData, IHttpContextAccessor httpContextAccessor)
+        public UsersController(IUsersData iUsersData)
         {
             this._iUsersData = iUsersData;
-            this.http = httpContextAccessor;
         }
 
         [HttpGet]
@@ -44,6 +43,7 @@ namespace Banking_System.Controllers
         [Route("api/[Controller]/[action]")]
         public IActionResult AddUserAccount(UserAccounts useraccounts)
         {
+            useraccounts.AvailableBalance = useraccounts.DepositAmt - useraccounts.WithdrawlAmt;
             if (useraccounts.AvailableBalance < 100)
             {
                 return new ObjectResult(new ApiError() { Message = "Available balance should be more than 100$" })
